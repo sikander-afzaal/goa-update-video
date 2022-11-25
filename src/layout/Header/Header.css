@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+
+.header {
+  width: 100%;
+  color: white;
+  position: fixed;
+  z-index: 10;
+  height: 85px;
+  padding: 20px 0px;
+  transition: all 0.5s ease-in-out;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.black-nav {
+  backdrop-filter: blur(10px);
+  background-color: #130707;
+}
+
+.black-nav .nav_ul a,
+.black-nav svg {
+  color: white;
+}
+
+.h_container {
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.nav_ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav_ul a {
+  margin: 0 5px;
+  color: #f5d3a7;
+  font-size: 1.3rem;
+  font-weight: 600;
+  height: 100%;
+  width: max-content;
+  padding: 14px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Kanit", serif !important;
+  font-weight: 400;
+}
+
+.head-logo {
+  display: none;
+}
+
+.nav_ul a::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.nav_ul a::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  background: #a77c2e;
+  border-radius: 64px;
+  opacity: 0;
+}
+
+.nav_ul a:hover::after {
+  opacity: 1;
+}
+
+.active-nav::after {
+  opacity: 1 !important;
+}
+
+.active-nav {
+  color: #f5d3a7 !important;
+}
+
+.nav_ul a:hover {
+  color: #f5d3a7;
+}
+.logo-mobile {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.head-logo {
+  position: absolute;
+  left: 50%;
+  top: 64%;
+  transform: translate(-50%, -50%);
+  display: none;
+  max-width: 120px;
+  transition: all 0.3s ease-in-out;
+  object-fit: contain;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: rgba(17, 20, 29, 0.72);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.mobile-login {
+  display: none;
+}
+
+@media screen and (max-width: 1148px) {
+  .header {
+    overflow: hidden;
+  }
+
+  .h_container {
+    position: relative;
+    width: 100%;
+    padding-right: 0px;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .login-btn {
+    display: none;
+  }
+
+  .nav_ul .mobile-login {
+    display: block;
+    position: static;
+    font-size: 1.4rem;
+    background-color: transparent;
+    font-family: "Kanit", serif !important;
+    color: white;
+    border: none;
+    padding: 0px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    z-index: 2000;
+    cursor: pointer, auto;
+    justify-self: flex-end;
+  }
+
+  .head-logo {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    width: 80px;
+  }
+
+  .show-logo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav_ul {
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    z-index: 35;
+    justify-content: center;
+    opacity: 0;
+    gap: 40px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    background-color: #000;
+    overflow-y: auto;
+  }
+
+  .nav_ul a::before {
+    display: none;
+  }
+
+  .nav_ul a::after {
+    display: none;
+  }
+
+  .active-nav::after {
+    display: none;
+  }
+
+  .black-nav .nav_ul a,
+  .black-nav svg {
+    color: white;
+  }
+
+  .nav_ul a {
+    margin: 0px 50px;
+    font-size: 1.4rem;
+    height: 50px;
+    color: white;
+  }
+
+  .desktop-logo {
+    margin: 0px !important;
+  }
+
+  .open-nav {
+    right: 0px;
+    opacity: 1;
+  }
+
+  .overflow {
+    overflow: visible !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .nav_ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .h_container {
+    padding-inline: 10px;
+  }
+
+  .header .play-demo {
+    width: 120px;
+  }
+}
