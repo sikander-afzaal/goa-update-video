@@ -35,7 +35,7 @@ const Hero = () => {
                 Market Place
               </Link> */}
               <a href="#" className="rent">
-                Renting
+                <p>Renting</p>
               </a>
               <a
                 href="https://godsofasgardp2e.com/downloads/goa_demo.exe"
